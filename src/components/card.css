@@ -1,0 +1,15 @@
+.card {
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.cardImage {
+  border-radius: 10px;
+}
+
+.cardBackground {
+  width: 150px;
+  height: 150px;
+  background: #400E32;
+  border-radius: 10px;
+}
