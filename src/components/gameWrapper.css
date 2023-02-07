@@ -44,6 +44,14 @@
   background-color: #F2CD5C;
 }
 
+@media screen and (max-width: 700px) {
+  .gameBoard {
+    grid-template-rows: repeat(4, 90px);
+    grid-template-columns: repeat(4, 90px);
+    gap: 10px;
+  }
+}
+
 .lds-dual-ring {
   display: inline-block;
   width: 80px;
