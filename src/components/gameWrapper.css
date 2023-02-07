@@ -1,4 +1,7 @@
 .gameWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   height: 100vh;
   background: rgb(166, 31, 105);
   background: linear-gradient(
@@ -6,6 +9,18 @@
     rgba(166, 31, 105, 1) 0%,
     rgba(242, 205, 92, 1) 100%
   );
+}
+
+.statusHeader {
+  min-height: 80px;
+  padding-top: 20px;
+  color: white;
+  font-size: 26px;
+}
+
+.gameBoard {
+  margin-top: 20px;
+  margin-bottom: 20px;
   display: grid;
   justify-content: center;
   align-content: center;
@@ -13,3 +28,44 @@
   grid-template-columns: repeat(4, 150px);
   gap: 20px;
 }
+
+.resetButton {
+  background: #F2921D;
+  border: none;
+  width: 125px;
+  height: 55px;
+  color: white;
+  font-size: 24px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.resetButton:hover {
+  background-color: #F2CD5C;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #F2921D;
+  border-color: #F2921D transparent #F2921D transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+

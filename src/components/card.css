@@ -4,12 +4,47 @@
 }
 
 .cardImage {
+  user-select: none;
   border-radius: 10px;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  animation: rotation2 0.3s;
+  transform-style: preserve-3d;
 }
 
 .cardBackground {
   width: 150px;
   height: 150px;
-  background: #400E32;
+  background: #400e32;
   border-radius: 10px;
+  animation: rotation 0.3s;
+  transform-style: preserve-3d;
+  background-color: #400e32;
+  opacity: 0.9;
+  background: repeating-linear-gradient(
+    -45deg,
+    #f2921d,
+    #f2921d 7px,
+    #400e32 7px,
+    #400e32 35px
+  );
+}
+
+@keyframes rotation {
+  from {
+    transform: rotateY(180deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes rotation2 {
+  from {
+    transform: rotateY(180deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
 }
